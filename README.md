@@ -1,1 +1,0 @@
-# Povstalez.github.io
