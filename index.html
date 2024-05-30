@@ -21,6 +21,10 @@
       <div id="unity-warning"> </div>
     </div>
     <script>
+
+      let tg = window.Telegram.WebApp;
+      tg.expand();
+      
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("ServiceWorker.js");
