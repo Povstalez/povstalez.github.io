@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -24,6 +25,8 @@
       </div>
     </div>
     <script>
+      let tg = window.Telegram.WebApp;
+      tg.expand();
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -57,11 +60,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/SleepagotchiTG.loader.js";
+      var loaderUrl = buildUrl + "/Sleepagotchi_WebGL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/SleepagotchiTG.data",
-        frameworkUrl: buildUrl + "/SleepagotchiTG.framework.js",
-        codeUrl: buildUrl + "/SleepagotchiTG.wasm",
+        dataUrl: buildUrl + "/Sleepagotchi_WebGL.data",
+        frameworkUrl: buildUrl + "/Sleepagotchi_WebGL.framework.js",
+        codeUrl: buildUrl + "/Sleepagotchi_WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Sleepagotchi_TG",
@@ -117,6 +120,9 @@
 
       document.body.appendChild(script);
 
+    </script>
+    <script>
+      let tg = window.Telegram.WebApp;
     </script>
   </body>
 </html>
